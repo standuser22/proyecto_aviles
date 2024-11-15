@@ -1,0 +1,77 @@
+*{
+    margin: 0%;
+    padding:0;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    position: fixed; /* Fija la navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté encima del contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de la navbar */
+.navbar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Los botones se apilan verticalmente */
+        align-items: center;
+    }
+
+    .navbar button {
+        width: 100%; /* Ocupan todo el ancho en pantallas pequeñas */
+        font-size: 14px;
+    }
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.galeria .imagen {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.galeria .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+
+.galeria .imagen:hover img {
+    transform: scale(1.1); }
+
+.galeria .imagen:hover {
+    transform: scale(1.05);
+}
